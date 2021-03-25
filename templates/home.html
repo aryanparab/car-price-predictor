@@ -1,9 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Car Price Predicator</title>
 </head>
 <body>
-
+<form action="\" method="POST">
+<label for="Present_Price in Lakhs">Present Price of car: </label>
+    <input type="text" id="Present_Price" name="Present_Price" placeholder="4.5">
+<label for="kms">Kilometers Driven: </label>
+    <input type="text" id="kms" name="kms">
+ <label for="age">Year Bought: </label>
+    <input type="text" id="age" name="age" placeholder="2018"> 
+<label class="card-title">No of Previous Owners</label>
+                            <select name="Owners" id="Owners"
+                             required="required">
+                                <option value="0">First Owner</option>
+                                <option value="1">Second Owner</option>
+                                <option value="3">Third Owner</option>
+                               
+                            </select>
+<label class="card-title">Fuel Type</label>
+                            <select name="fuel" id="fuel" required="required">
+                                <option value="petrol">Petrol</option>
+                                <option value="diesel">Diesel</option>
+                                <option value="cng">CNG</option>
+                               
+                            </select>
+<label class="card-title">Transmission</label>
+                            <select name="transmission" id="transmission" required="required">
+                                <option value="auto">Auotmatic</option>
+                                <option value="manual">Manual</option>
+                            </select>
+<label class="card-title">Seller Type </label>
+                            <select name="seller" id="seller" required="required">
+                                <option value="indiv">Individual</option>
+                                <option value="Dealer">Dealer</option>
+                                </select>
+<input type="submit" name="submit">
+</form>
+{% if context != '' %}
+<p>{{ context }}</p>
+{% endif %}
 </body>
 </html>
